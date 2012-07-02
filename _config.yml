@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://nortoncottage.com
+title: An Excellent Adventure
+subtitle: From BOFH to Devops in a million tiny steps
+author: Sixty4k
 simple_search: http://google.com/search
-description:
+description: One small step for man, one giant leapsecond
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -58,14 +58,14 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 # ----------------------- #
 
 # Github repositories
-github_user:
-github_repo_count: 0
+github_user: sixty4k
+github_repo_count: 5
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
-twitter_tweet_count: 4
+twitter_user: sixty4k
+twitter_tweet_count: 7
 twitter_show_replies: false
 twitter_follow_button: true
 twitter_show_follower_count: false
@@ -81,8 +81,8 @@ googleplus_user:
 googleplus_hidden: false
 
 # Pinboard
-pinboard_user:
-pinboard_count: 3
+pinboard_user: sixty4k
+pinboard_count: 6
 
 # Delicious
 delicious_user:
