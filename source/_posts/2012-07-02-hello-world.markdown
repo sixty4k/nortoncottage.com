@@ -29,6 +29,6 @@ Also, I'm trying to move a very old school dev vs ops culture to more of a devop
 
 nothing.
 
-[1] http://octopress.org/
-[2] http://jekyllrb.com/
-[3] http://www.sublimetext.com/
+[1]: http://octopress.org/
+[2]: http://jekyllrb.com/
+[3]: http://www.sublimetext.com/
