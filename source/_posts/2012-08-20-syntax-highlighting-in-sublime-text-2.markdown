@@ -3,7 +3,7 @@ layout: post
 title: "Syntax Highlighting in Sublime Text 2"
 date: 2012-08-20 11:54
 comments: false
-categories: [st2, sublime text 2, syntax highlighting, learning, doing, github] 
+categories:
 ---
 
 #Syntax highlighting in Sublime Text
