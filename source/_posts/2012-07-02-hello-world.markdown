@@ -5,7 +5,7 @@ date: 2012-07-02 01:01
 comments: false
 categories: 
 ---
-# A New <strike>Hope</strike> Beginning
+## A New <strike>Hope</strike> Beginning
 
 Here begins the documenting of my attempts at both staying current and relevant in the rapidly changing world of operations. Devops is the new thing.  I am a bit of an old guard BOFH, even if I never quite bought into the BOFH attitude.
 

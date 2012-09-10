@@ -5,36 +5,34 @@ date: 2012-08-20 11:54
 comments: false
 categories:
 ---
-
-#Syntax highlighting in Sublime Text
-
 It seems like this should be a pretty easy thing, but the existing documentation is not super clear (to me anyway), and it's definately not inviting.  But it seems like if I'm gonna use a fancy editor such as ST2, I should:
 
- - get syntax highlighting for the files I edit
- - understand how to add syntax highlighting for new file types
- - start learning the ins and outs of it.
+- get syntax highlighting for the files I edit
+- understand how to add syntax highlighting for new file types
+- start learning the ins and outs of it.
 
-##An adventure in regex and obtuse documentation
+## An adventure in regex and obtuse documentation
 
-###Zone Files
+### Zone Files
 
 I'm working my way through our zone files at $work, cleaning out the cruft of several generations of moving standards and moving the remains of old internal domains to the current domain.  So having some syntax highlighting seemed like a far more interesting thing that actually doing the work.  :D
 
-####Things to highlight
+#### Things to highlight
 
 Some docs from [Red Hat][1] and [IANA][2] were helpful in identifying my list of things to highlight: 
- - Comments
- - Directives
- - Resource Records
- - Time Units
- - MX Preference
 
-###Figuring Out Syntax Highlighting
+- Comments
+- Directives
+- Resource Records
+- Time Units
+- MX Preference
+
+### Figuring Out Syntax Highlighting
 
 Starting with Sublime Text documentation ([old][4] and [new][5]) on syntax highlighting, and a [cheat sheet][6] for ST2's regex (ruby?).
 
 
-####Starting Easy
+#### Starting Easy
   First I did comments, as that seemed like the easiest regex to not mess up.
 
 {% codeblock Zone Comments lang:json %}
@@ -46,7 +44,7 @@ Starting with Sublime Text documentation ([old][4] and [new][5]) on syntax highl
 
 Made sense, semicolon and everything to the end of the line is a comment.  I had a little bit of trouble at first because I misread the [ST doc][4] writeup about naming, and named it something random.  This would catch me a few times through this until I made myself a [cheatsheet][7] that I could keep open in another window.
 
-####Getting More Complex
+#### Getting More Complex
 
 The '@' directive was another pretty straightforward match, and as the rest of the directives in a zone file are a pretty short list, I just shoved it **all** into the regex.  Seemed to be an acceptable method of doing things (check out the html tmlanguage file for some crazy examples).  
 
@@ -79,11 +77,11 @@ Captures get even more fun in this next bit
 
 So the initial match, as well as the last are the hostname/ip in a typical A record, "2" is the ttl for a single record (doesn't get used most of the time in my zone files, but I wanted to make sure it got colored the same as I did other time unit call outs).  "3" is the 'IN A', 'IN CNAME', etc.  I started going down a rabbit hole of actually correctly calling out of the resource types, but then realized that was far more work than necessary.
 
-##Sharing
+## Sharing
 
 It's on [github] [3], pull requests gladly accepted.  Is this worth trying to get listed in Package Control?  Seems unlikely.  
 
-###Next Steps
+## Next Steps
 
 The easy plan is to work on other config files I look at regularly.  The harder plan is to expand past syntax highlighting and get into tab completions and shft-cmd-p creation of zone file templates and such.
 
