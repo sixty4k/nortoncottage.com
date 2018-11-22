@@ -1,0 +1,30 @@
+baseURL = "https://nortoncottage.com"
+languageCode = "en-us"
+title = "Norton Cottage"
+#title = "An Excellent Adventure"
+description = "From BOFH to Devops in a million tiny steps"
+
+buildDrafts = false
+
+enableGitInfo = false
+
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsStyle = "solarized-dark"
+
+pluralizelisttitles = "false"
+
+[params]
+  customDateFormat = "2006-01-02"
+  customCodeStyle = true
+  customBlockquoteStyle = true
+  showPostSummary = false
+
+[menu]
+  [[menu.nav]]
+  name = "about"
+  url = "/about/"
+  weight = 3
+
+[outputs]
+home = [ "HTML", "RSS"]

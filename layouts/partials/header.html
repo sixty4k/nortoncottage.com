@@ -1,0 +1,39 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {{ with .Site.Params.description }}
+  <meta name="description" content="{{ . }}">
+  {{ end }}
+
+
+  <!-- JQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap CSS-->
+  {{ $bootstrapCss := "css/bootstrap.min.css" }}
+  <link rel="stylesheet" href="{{ $bootstrapCss | absURL }}" />
+  {{ $bootstrapWorkaroundCss := "css/bootstrap_workarounds.css" }}
+  <link rel="stylesheet" href="{{ $bootstrapWorkaroundCss | absURL }}" />
+
+  <!-- Bootstrap JS -->
+  {{ $bootstrapJs := "js/bootstrap.min.js" }}
+  <script src="{{ $bootstrapJs | absURL }}"></script>
+
+
+
+  {{ if .IsHome }}
+    {{ with .OutputFormats.Get "rss" -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+    <title>{{ .Site.Title }} | My home on the internet superhighway </title>
+  {{ else }}
+    {{ with .OutputFormats.Get "rss" -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+  {{ end }}
+  <script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
+</head>
