@@ -1,0 +1,31 @@
+{{- define "main" -}}
+<main>
+    </br>
+    <article>
+        <!-- "{{.Content}}" pulls from the markdown content of the corresponding md file -->
+        {{.Content}}
+    </article>
+
+<hr>
+
+    <article>
+    <div class="row">
+    {{ range $section := sort .Site.Sections "Name" "asc" }}
+      <div class="pt-4 col-md-5">
+        <h4><a href="{{ .URL }}">{{ .Name }}</a></h4><hr>
+              {{ range .Pages }}
+                  <div class="row">
+                      <div class="col-md-6 text-right"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></div>
+                      <div class="col-md-4"><small class="text-secondary">{{.Date.Format "2006-01-02"}}</small></div>
+                  </div>
+              {{ end }}
+
+      </div>
+    {{ end }}
+    </div>
+  </article>
+</main>
+
+
+
+{{- end -}}

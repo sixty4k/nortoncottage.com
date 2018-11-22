@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation">
+    <a class="navbar-brand mr-auto text-muted" href="/"> {{ .Site.Title }} &nbsp; | &nbsp; {{ .Title }} </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#side-nav" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="navbar-collapse collapse" id="side-nav">
+        <ul class="navbar-nav ml-auto navbar-right">
+
+            {{ range $section := sort .Site.Sections "Name" "asc" }}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ .URL }}">{{ lower .Name }}</a>
+            </li>
+            {{ end }}
+            {{ range .Site.Menus.nav }}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ .URL }}">{{ lower .Name }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</nav>
+
