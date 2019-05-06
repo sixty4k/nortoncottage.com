@@ -28,3 +28,7 @@ pluralizelisttitles = "false"
 
 [outputs]
 home = [ "HTML", "RSS"]
+
+[blackfriday]
+  hardLineBreak = "enabled"
+  joinLines = "disabled"

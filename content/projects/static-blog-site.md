@@ -1,7 +1,7 @@
 ---
 title: "Static Blog Site"
 date: 2018-11-17T11:08:02-06:00
-draft: true
+draft: false
 ---
 
 # Blahhhgh
@@ -23,7 +23,7 @@ Here's what I do want to document, for my own reference as well as to share, the
 I'm likely to start writing in a handful place:
 
  - NValt, using NotePlan's icloud notes drive as it's backend
- - NotePlan, on my phone and laptop 
+ - NotePlan, on my phone and laptop
  - Byword, on my phone and laptop
  - Sublime Text
  - Drafts, on my phone
@@ -45,7 +45,6 @@ What I don't have is:
 
 - How do NotePlan, NValt, Byword cope with frontmatter?
 - git hook to publish on master update
-- 
 
 
 ## Useful References
