@@ -12,7 +12,7 @@
     <div class="row">
     {{ range $section := sort .Site.Sections "Name" "asc" }}
       <div class="pt-4 col-md-5">
-        <h4><a href="{{ .URL }}">{{ .Name }}</a></h4><hr>
+        <h4><a href="{{ .Params.url }}">{{ .Name }}</a></h4><hr>
               {{ range .Pages }}
                   <div class="row">
                       <div class="col-md-6 text-right"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></div>
